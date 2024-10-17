@@ -12,7 +12,7 @@ function createImageElement(image: { filename: string, alttext: string, caption:
     <article>
       <figure>
         <picture>
-          <img alt="${image.alttext}" src="${image.filename}" loading="lazy">
+          <img alt="${image.alttext}" src="${image.filename}" loading="lazy" class="clickable-image">
         </picture>
         <figcaption>${image.caption} debugging information ${image.filename}</figcaption>
       </figure>
@@ -25,7 +25,13 @@ async function setupGallery() {
   const gallery = `<aside><p>click the button and have some fun</p><button id="counter" type="button">testing</button></aside>` + images.map(createImageElement).join('');
   document.querySelector<HTMLDivElement>('#app')!.innerHTML = gallery;
 
-  // Move the setupCounter call here
+  // Add event listeners to images
+  document.querySelectorAll<HTMLImageElement>('.clickable-image').forEach(img => {
+    img.addEventListener('click', () => {
+      window.open(img.src, '_blank');
+    });
+  });
+
   setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
 }
 
