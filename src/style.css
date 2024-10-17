@@ -103,6 +103,10 @@ article figure figcaption {
   margin-top: 0.5em;
 }
 
+aside {
+  margin: 1em;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
