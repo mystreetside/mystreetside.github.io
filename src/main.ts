@@ -12,7 +12,7 @@ function createImageElement(image: { filename: string, alttext: string, caption:
     <article>
       <figure>
         <picture>
-          <img alt="${image.alttext}" src="${image.filename}" loading="lazy" class="clickable-image">
+          <img alt="${image.alttext}" src="${image.filename}" loading="lazy" width="4032" height="3024" class="clickable-image">
         </picture>
         <figcaption>${image.caption} debugging information ${image.filename}</figcaption>
       </figure>

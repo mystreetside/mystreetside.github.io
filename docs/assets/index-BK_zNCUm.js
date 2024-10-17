@@ -2,7 +2,7 @@
     <article>
       <figure>
         <picture>
-          <img alt="${n.alttext}" src="${n.filename}" loading="lazy" class="clickable-image">
+          <img alt="${n.alttext}" src="${n.filename}" loading="lazy" width="4032" height="3024" class="clickable-image">
         </picture>
         <figcaption>${n.caption} debugging information ${n.filename}</figcaption>
       </figure>
